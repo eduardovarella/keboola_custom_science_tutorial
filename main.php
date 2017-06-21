@@ -17,10 +17,11 @@ echo "conn_id: " . $conn_id . "\n";
 echo "Authenticating " . $ftp_user_name . "\n";
 $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 
-ftp_pasv($conn_id, TRUE);
+ftp_pasv($conn_id, true);
 
 // try to download $server_file and save to $local_file
-if (ftp_get($conn_id, $local_file, $server_file, FTP_ASCII)) {
+echo "Downloading file  " . $server_file . " to " . $local_file . "\n";
+if (ftp_get($conn_id, $local_file, $server_file, FTP_BINARY)) {
     echo "Successfully written to $local_file\n";
 } else {
     echo "There was a problem\n";
