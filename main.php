@@ -5,7 +5,7 @@ $ftp_user_name = "evarella";
 $ftp_user_pass = "punk2017";
 
 // define some variables
-$local_file = '/data/in/tables/local_TAB_DIST_CADT_varella.csv';
+$local_file = 'local_TAB_DIST_CADT_varella.csv';
 $server_file = '/punkmetrics/TAB_DIST_CADT_varella.csv';
 
 // set up basic connection
