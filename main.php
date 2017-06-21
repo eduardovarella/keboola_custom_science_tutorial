@@ -12,7 +12,7 @@ while ($line = fgets($inputFile)) {
     else {
         $columns = explode(",", $line);
 
-        $newLine = $columns[0] . "," .  str_replace("\r\n", "", $columns[1]) . "," . $columns[0]*2 . "\r\n";
+        $newLine = $columns[0] . "," .  str_replace("\r\n", "", $columns[1]) . "," . $columns[0] . "\r\n";
     }
     
     fwrite($outputFile, $newLine);
